@@ -1,0 +1,308 @@
+/*
+ * Joplin macOS Theme – Pierre Lannes
+ * Repository: https://github.com/PierreLga456/joplin-macos-theme
+ * License: MIT
+ * Avec l'aimable aide de ChatGPT
+ */
+
+/* For styling the entire Joplin app (except the rendered Markdown, which is defined in `userstyle.css`) */
+
+/* Problème du trait qui apparait en bas de fenêtre quand on clique sur un lien dans le module OUTLINE */
+#react-root {
+    overflow-y: clip !important;
+    overflow-x: clip;
+}  
+
+/* COLONNE CARNETS/ÉIQUETTES */
+
+/* Thème sombre */
+@media (prefers-color-scheme: dark) {
+    .sidebar, .resizableLayoutItem.rli-sideBar {
+        background-color: #323232 !important;
+    }
+}
+
+/* Thème clair */
+@media (prefers-color-scheme: light) {
+    /* Fond */
+  .sidebar,  
+  .rli-sideBar /* rajout pour fond de barre de défilement */ {
+        background-color: #E9E9E9; /* old #313640 */
+    }    
+  /* Couleur du texte dans la sidebar (clair) */
+  .sidebar,
+/* Texte en bas de la première sidebar (synchronisation et infos) */
+  .sidebar > div:last-child,
+  .sidebar > div:last-child *,
+  .sidebar .list-item a,
+  .sidebar .sidebar-header,
+  .sidebar .sidebar-header-button,
+  .sidebar .list-item {
+    color: #4E4E4E !important;
+  }
+  /* Titre des sections dans la sidebar (CARNETS, ÉTIQUETTES, etc.) */
+  .sidebar .hhvmJE {
+    color: #4E4E4E !important;
+    font-weight: 600;
+  }
+  .list-item-wrapper.-selected {
+    background-color: #D2D2D2;
+  }
+  .sidebar > div:not(.sidebar__buttons) button svg {
+    fill: #4E4E4E !important;
+  }
+  .sidebar > div:not(.sidebar__buttons) button span {
+    color: #4E4E4E !important;
+  }
+  /* Styler la poignée (handle) de la barre de défilement */
+  .rli-sideBar ::-webkit-scrollbar-thumb  {
+     background: #BABABA; 
+  }
+  /* Bouton Synchroniser */
+  .sidebar button .icon-sync {
+    color: #4E4E4E !important;
+  }
+  .sidebar button .icon-sync + span {
+    color: #4E4E4E !important;
+  }
+  .sidebar button .icon-sync + span::before {
+    border: none !important;
+  }
+  .sidebar button {
+    border: none !important;
+    background: none !important;
+  }
+/* Fin Thème clair */    
+}
+
+/* ICÔNES  */
+.icon-notebooks, .icon-notes, .icon-tags, i.far.fa-folder {
+color: #34A6FF !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .note-editor-wrapper .icon-notebooks {
+    color: #323232 !important;
+    opacity: 0.9;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .note-editor-wrapper .icon-notebooks {
+    color: #ffffff !important;
+    opacity: 0.9;
+  }
+}
+
+/* COLONNE DE LISTE DE NOTES  */
+
+/* Séparateur ligne note */
+div.note-list-item::before {
+    border: 1px solid rgba(241,230,230,0.05) !important;
+} 
+
+/* 🎯 Effet hover sur les carnets/étiquettes */
+.sidebar .list-item-container:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+/* 🌙 Mode sombre */
+@media (prefers-color-scheme: dark) {
+  .sidebar .list-item-container:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  /* Fond de la liste des notes */
+  .note-list {
+    background-color: #1E1E1E !important;
+  }
+  /* Texte des titres de notes dans la liste */
+  .note-list .title span {
+    color: #DCDCDC !important;
+  }
+}
+
+.title, .list-item .title, .tag-label, .note-list-item > a > span, .todo-list-item > a > span  {
+  --font-system: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    /* old font-family: Roboto;  'Lato', sans-serif */
+}
+
+.title {
+    font-size:15px !important;
+} 
+
+/* Ligne active dans colonne de liste de notes */
+
+@media (prefers-color-scheme: dark) {
+    .content.-selected {
+        background-color: #2356CA !important;
+    }
+}
+
+input.title-input {
+    font-family: 'Lato', sans-serif;
+}
+
+/* Case à cocher ronde dans la liste des notes */
+.note-list-item .checkbox input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #c7c7cc;
+  background-color: white;
+  cursor: pointer;
+  margin: 0;
+  position: relative;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+    /* Survol */
+    .note-list-item .checkbox input[type="checkbox"]:hover {
+      border-color: #007aff;
+    }
+
+    /* État coché avec SVG en background */
+    .note-list-item .checkbox input[type="checkbox"]:checked {
+      background-color: #007aff;
+      border-color: #007aff;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='5 13 9 17 19 7'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 12px 12px;
+      animation: checkBounce 0.2s ease;
+    }
+
+    /* Animation type iOS */
+    @keyframes checkBounce {
+      0% {
+        transform: scale(0.8);
+      }
+      60% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+
+@media (prefers-color-scheme: dark) {
+  .note-list .checkbox input[type="checkbox"] {
+    background-color: #2a2a2a !important;
+    border: 1px solid #666 !important;
+    border-radius: 999px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .note-list .checkbox input[type="checkbox"]:checked {
+    background-color: #007aff !important;
+    border-color: #007aff !important;
+  }
+}
+
+
+
+/* ✅ Titre multi-ligne, non tronqué */
+.note-list .note-list-item .title span {
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+  display: block !important;
+  word-break: break-word !important;
+  line-height: 1.4;
+  font-size: 13px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+/* ✅ Conteneur adaptatif avec légère séparation */
+.note-list-item-wrapper {
+  height: auto !important;
+  overflow: visible !important;
+  display: block !important;
+  padding: 8px 12px;
+  margin: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+/* ✅ Suppression des contraintes inutiles */
+.note-list-item {
+  height: auto !important;
+  overflow: visible !important;
+  display: block !important;
+  padding: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+/* 🌓 Sombre : trait léger */
+@media (prefers-color-scheme: dark) {
+  .note-list-item-wrapper {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+}
+
+/* ✅ Fond de sélection doux + bord arrondi */
+.note-list-item-wrapper[aria-selected="true"] {
+  background-color: #e6f0fa !important; /* Bleu très clair */
+  border-radius: 8px;
+  padding: 8px 12px !important;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.note-list-item-wrapper[aria-selected="true"] .note-list-item .content .title span {
+  color: #333 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+      .note-list-item-wrapper[aria-selected="true"] {
+        background-color: #2a2f38 !important; /* Gris-bleu foncé, discret */
+      }
+    .note-list-item-wrapper[aria-selected="true"] .note-list-item .content .title span {
+      color: #f0f0f0 !important;
+    }
+}
+
+.note-list-item-wrapper:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+/* Mode sombre : survol plus doux */
+@media (prefers-color-scheme: dark) {
+  .note-list-item-wrapper:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* ✅ Supprimer fond parasite du bloc interne */
+.note-list-item-wrapper[aria-selected="true"] .note-list-item {
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* ✅ Texte blanc + annulation héritage */
+.note-list-item-wrapper[aria-selected="true"] .title span {
+  color: white !important;
+  font-weight: 600;
+  background: transparent !important;
+}
+
+/* ✅ Supprimer tout fond résiduel dans tous les enfants */
+.note-list-item-wrapper[aria-selected="true"] * {
+  background: none !important;
+}

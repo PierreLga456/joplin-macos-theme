@@ -1,0 +1,53 @@
+/*
+ * Joplin macOS Theme – Pierre Lannes
+ * Repository: https://github.com/PierreLga456/joplin-macos-theme
+ * License: MIT
+ * Avec l'aimable aide de ChatGPT
+ */
+
+/* For styling the rendered Markdown */
+body p, li {
+    font-size: 17px;
+    font-family: 'Georgia', sans-serif;
+}
+
+body h1, body h2, body h3  {
+    font-family: 'Lato', sans-serif; /* Lora */
+}
+
+a {
+    color: #5D9EFF !important;
+} 
+
+
+
+ul.joplin-checklist li {
+    position: relative;
+    list-style: none;
+    padding-left: 0.2em; /* encore plus serré, testé safe */
+}
+
+ul.joplin-checklist li.checked::before {
+    content: "\f058";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #007aff;
+    position: absolute;
+    left: 0;
+    top: 0.03em;
+    font-size: 1.05em; /* 🠈 un poil plus petit */
+    animation: checkBounce 0.2s ease;
+}
+
+ul.joplin-checklist li:not(.checked)::before {
+    content: "\f111";
+    font-family: "Font Awesome 5 Free";
+    color: #CACACA;
+    position: absolute;
+    left: 0;
+    top: 0.05em;
+    font-size: 1.05em;
+    transition: color 0.2s ease;
+}
+
+
