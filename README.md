@@ -1,11 +1,34 @@
-# Joplin macOS Theme
+# 🎨 Joplin macOS Theme
 
-Un thème CSS sobre et élégant pour l'application Joplin, inspiré de l'esthétique macOS.
+Un thème personnalisable pour l’application [Joplin](https://joplinapp.org), inspiré de l’esthétique de macOS, conçu pour offrir une interface cohérente, élégante et confortable au quotidien.
 
-## Contenu
+💡 **Adaptatif** : ce thème s’ajuste automatiquement au mode clair ou sombre de votre système d’exploitation.
 
-- `userchrome.css` : personnalisation de l'interface Joplin (sidebars, liste de notes, boutons, etc.)
-- `userstyle.css` : personnalisation du rendu Markdown des notes
+📦 Ce dépôt contient :
+- `userchrome.css` : pour styler l’interface de l’application Joplin (barres, listes, menus…)
+- `userstyle.css` : pour styler le rendu Markdown (contenu des notes)
+- Des captures d’écran (dans le dossier `screenshots/`) pour voir le rendu
+
+---
+
+## 📸 Aperçu
+
+### 🌞 Mode clair
+![Mode clair](screenshots/light-mode.png)
+
+### 🌙 Mode sombre
+![Mode sombre](screenshots/dark-mode.png)
+
+---
+
+## ✅ Objectifs du thème
+
+- Reproduire une expérience proche des applications macOS natives
+- Améliorer la lisibilité et le contraste dans toutes les sections
+- Adapter automatiquement le style au mode clair/sombre de l’OS
+- Offrir une base facilement personnalisable pour les utilisateurs avancés
+
+---
 
 ## Installation
 
