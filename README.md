@@ -1,6 +1,9 @@
 # 🎨 Joplin macOS Theme
 
 [![Release](https://img.shields.io/github/v/release/PierreLga456/joplin-macos-theme?label=version)](https://github.com/PierreLga456/joplin-macos-theme/releases/latest)
+![Compatible Joplin Desktop](https://img.shields.io/badge/✅%20Compatible-Joplin%20Desktop-blue?logo=joplin&logoColor=white)
+![Support macOS / Windows / Linux](https://img.shields.io/badge/🖥️%20macOS%20%7C%20Windows%20%7C%20Linux-supported-success)
+
 
 Un thème personnalisable pour l’application [Joplin](https://joplinapp.org), inspiré de l’esthétique de macOS, conçu pour offrir une interface claire, harmonieuse et agréable à utiliser au quotidien.
 
