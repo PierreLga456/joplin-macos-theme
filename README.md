@@ -61,7 +61,7 @@ Un thème personnalisable pour l’application [Joplin](https://joplinapp.org), 
 ## Auteur
 
 Pierre Lannes  
-GitHub : [PierreLga456](https://github.com/PierreLga456)  
+[pierre-lannes.fr](https://www.pierre-lannes.fr)  
 Avec l'aimable aide de ChatGPT
 
 ## Licence
