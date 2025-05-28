@@ -1,5 +1,7 @@
 # 🎨 Joplin macOS Theme
 
+[![Release](https://img.shields.io/github/v/release/PierreLga456/joplin-macos-theme?label=version)](https://github.com/PierreLga456/joplin-macos-theme/releases/latest)
+
 Un thème personnalisable pour l’application [Joplin](https://joplinapp.org), inspiré de l’esthétique de macOS, conçu pour offrir une interface claire, harmonieuse et agréable à utiliser au quotidien.
 
 📣 Présenté sur le forum Joplin : [Voir le post officiel](https://discourse.joplinapp.org/t/macos-style-joplin-theme-by-pierre-lannes/45599)
