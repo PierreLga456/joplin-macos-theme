@@ -1,6 +1,15 @@
 # 🎨 Joplin macOS Theme
 
-Un thème personnalisable pour l’application [Joplin](https://joplinapp.org), inspiré de l’esthétique de macOS, conçu pour offrir une interface cohérente, élégante et confortable au quotidien.
+Un thème personnalisable pour l’application [Joplin](https://joplinapp.org), inspiré de l’esthétique de macOS, conçu pour offrir une interface claire, harmonieuse et agréable à utiliser au quotidien.
+
+📣 Présenté sur le forum Joplin : [Voir le post officiel](https://discourse.joplinapp.org/t/macos-style-joplin-theme-by-pierre-lannes/45599)
+
+## Sommaire
+- [Aperçu](#-aperçu)
+- [Objectifs du thème](#-objectifs-du-thème)
+- [Installation](#-installation)
+- [Auteur](#auteur)
+- [Licence](#licence)
 
 💡 **Adaptatif** : ce thème s’ajuste automatiquement au mode clair ou sombre de votre système d’exploitation.
 
