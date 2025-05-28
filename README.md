@@ -30,16 +30,24 @@ Un thème personnalisable pour l’application [Joplin](https://joplinapp.org), 
 
 ---
 
-## Installation
+## 🚀 Installation
+
+> Ce thème fonctionne avec la version **Desktop** de Joplin (macOS, Windows, Linux)
 
 1. Ouvrir Joplin
-2. Aller dans **Réglages > Général > Apparence**
-3. Cliquer sur le bouton **Montrer Options avancées**
-4. Ouvrir **Feuille de Style pour le rendu Mardown**`
-5. Coller le contenu de `userstyle.css` à la place du contenu existant
-6. Ouvrir **Feuille de Style pour l'application Joplin**`
-7. Coller le contenu de `userchrome.css` à la place du contenu existant
-8. Redémarrer Joplin
+2. Aller dans **Paramètres** :
+   - Sur macOS : `Joplin > Réglages`
+   - Sur Windows/Linux : `Outils > Options`
+3. Aller dans l’onglet **Apparence**
+4. Cliquer sur **"Montrer les options avancées"** (en bas de l’écran)
+5. Ouvrir **Feuille de style pour le rendu Markdown**
+   - Remplacer le contenu par celui de `userstyle.css` (si utilisé)
+6. Ouvrir **Feuille de style pour l'application Joplin**
+   - Remplacer le contenu par celui de `userchrome.css`
+7. Redémarrer Joplin pour appliquer le thème
+
+> 📝 Si tu veux uniquement changer l’interface (menus, listes, etc.), seul `userchrome.css` est nécessaire.
+
 
 ## Auteur
 
