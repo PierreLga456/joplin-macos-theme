@@ -13,7 +13,7 @@
     overflow-x: clip;
 }  
 
-/* COLONNE CARNETS/ÉIQUETTES */
+/* COLONNE CARNETS/ÉTIQUETTES */
 
 /* Thème sombre */
 @media (prefers-color-scheme: dark) {
@@ -95,6 +95,13 @@ color: #34A6FF !important;
 }
 
 /* COLONNE DE LISTE DE NOTES  */
+
+/* Amélioration du contraste pour les termes de recherche surlignés */
+.note-list mark[data-markjs="true"] {
+  color: #000 !important; /* texte noir */
+  background-color: #ffff88 !important; /* jaune clair classique */
+  font-weight: bold;
+}
 
 /* Séparateur ligne note */
 div.note-list-item::before {
